@@ -7,7 +7,7 @@ class UrlMappings {
 			}
 		}
 
-		"/"(view:"/home/comingSoon")
+		"/"(view:"/home/home")
 		"500"(view:'/error')
 	}
 }
