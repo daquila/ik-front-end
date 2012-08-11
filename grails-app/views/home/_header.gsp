@@ -9,10 +9,12 @@
 			<a href="#" class="brand">InitialKick</a>
 			<div class="nav-collapse">
 				<ul class="nav">
-					<li><a href="#">Players</a></li>
-					<li><a href="#">Matches</a></li>
-					<li><a href="#">Teams</a></li>
+					<li><a href="#">Eventos</a></li>
 				</ul>
+				<ul class="nav pull-right">
+		            <li><a href="#">Acerca</a></li>
+		            <li><a href="#">Registrarse</a></li>
+          		</ul>
 			</div>
 		</div>
 	</div>
