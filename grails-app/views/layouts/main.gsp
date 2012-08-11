@@ -15,7 +15,6 @@
 	<body>
 		<g:render template="/home/header"/>
 		<g:layoutBody/>
-		<g:render template="/home/footer"/>
 		<g:javascript library="application"/>
         <r:layoutResources />
 	</body>
