@@ -13,7 +13,12 @@
 				</ul>
 				<ul class="nav pull-right">
 		            <li><a href="#">Acerca</a></li>
-		            <li><a href="#">Registrarse</a></li>
+		            <g:if test="${!session.user}">
+		            	<li><a href="#">Registrarse</a></li>
+		            </g:if>
+		            <g:else>
+		            	<li><g:link controller="login" action="logout">Logout</g:link></li>
+		            </g:else>
           		</ul>
 			</div>
 		</div>

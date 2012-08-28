@@ -3,6 +3,13 @@ dataSource {
     driverClassName = "org.h2.Driver"
     username = "sa"
     password = ""
+    /*
+	pooled = true
+	dbCreate = "update"
+	driverClassName = "com.mysql.jdbc.Driver"
+	username = "ik"
+	password = "ik123456"
+     */
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -13,8 +20,8 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:h2:mem:devDb;MVCC=TRUE"
+            dbCreate = "create" // one of 'create', 'create-drop', 'update', 'validate', ''
+       		url = "jdbc:h2:mem:testDb;MVCC=TRUE"
         }
     }
     test {

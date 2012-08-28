@@ -48,13 +48,18 @@
 					</div>
 				</div>
 				<div class="span4">
-					<div class="well">
-						<form >
-							<g:textField name="email" class="span3" placeholder="Email" style="height:30px;"/>
-							<g:passwordField name="password" class="span3" placeholder="Password" style="height:30px;"/>
-							<input type="submit" name="confirm" value="Entrar" class="btn"/>
-						</form>
-					</div>
+					<g:if test="${!session.user}">
+						<div class="well">
+							<g:form controller="login" action="login" method="post">
+								<g:textField name="email" class="span3" placeholder="Email" style="height:30px;"/>
+								<g:passwordField name="password" class="span3" placeholder="Password" style="height:30px;"/>
+								<g:if test="${message}">
+									<div>${message}</div>
+								</g:if>
+								<input type="submit" name="confirm" value="Entrar" class="btn"/>
+							</g:form>
+						</div>
+					</g:if>
 					<div class="well">
 						<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 						<script>
