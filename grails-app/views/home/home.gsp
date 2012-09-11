@@ -34,6 +34,11 @@
 	
 		<div class="container" style="margin-top: 70px;">
 			<div class="row">
+				<g:if test="${flash.noLogin}">
+					<div class="span12">
+					<div class="alert alert-error">${flash.noLogin}</div>
+					</div>
+				</g:if>
 				<div class="span8">
 					<div class="well">
 						<h3>Muy pronto</h3><br>
@@ -51,12 +56,24 @@
 					<g:if test="${!session.user}">
 						<div class="well">
 							<g:form controller="login" action="login" method="post">
-								<g:textField name="email" class="span3" placeholder="Email" style="height:30px;"/>
-								<g:passwordField name="password" class="span3" placeholder="Password" style="height:30px;"/>
-								<g:if test="${message}">
-									<div>${message}</div>
-								</g:if>
-								<input type="submit" name="confirm" value="Entrar" class="btn"/>
+								<div class="control-group">
+									<div class="controls">
+										<g:textField name="email" placeholder="Email" style="height:30px"/>
+									</div>
+								</div>
+								<div class="control-group">
+									<div class="controls">
+										<g:passwordField name="password" placeholder="Password" style="height:30px;"/>
+									</div>
+								</div>
+								<div class="control-group">
+									<div class="controls">
+										<input type="submit" name="confirm" value="Entrar" class="btn"/>
+										<g:if test="${flash.loginMessage}">
+											<span style="color:#B94A48;">&nbsp;${flash.loginMessage}</span>
+										</g:if>
+									</div>
+								</div>
 							</g:form>
 						</div>
 					</g:if>

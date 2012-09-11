@@ -3,11 +3,7 @@ package com.initialkick
 class UsersController {
 
 	def index() {
-		redirect(action: "list")
+		render(view: "list", model: [users: User.list()])
 	}
 
-	def list() {
-		[users: User.list()]
-	}
-	
 }

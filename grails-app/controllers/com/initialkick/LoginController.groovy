@@ -13,9 +13,11 @@ class LoginController {
 		User user = User.findByEmail(params.email)
 		if (user?.password == params.password){
 			session.user = user
-			render(view: "/home/home")
+		}else{
+			flash.loginMessage = "Verifique los datos."
 		}
-		render(view: "/home/home", model: [message: "Verifique los datos."])
+		redirect(controller: "home")
+			
 		
 	}
 	

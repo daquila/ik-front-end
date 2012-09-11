@@ -9,6 +9,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.css')}" type="text/css">
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'datepicker.css')}" type="text/css">
 		<g:layoutHead/>
         <r:layoutResources />
 	</head>
@@ -16,6 +17,9 @@
 		<g:render template="/home/header"/>
 		<g:layoutBody/>
 		<g:javascript library="application"/>
+		<g:javascript src="jquery-1.7.2.min.js"/>
+		<g:javascript src="bootstrap-datepicker.js"/>
+		<g:javascript src="bootstrap.js"/>
         <r:layoutResources />
 	</body>
 </html>

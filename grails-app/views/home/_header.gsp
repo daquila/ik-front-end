@@ -6,11 +6,13 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<a href="#" class="brand">InitialKick</a>
+			<g:link controller="home" action="index" class="brand">InitialKick</g:link>
 			<div class="nav-collapse">
-				<ul class="nav">
-					<li><a href="#">Eventos</a></li>
-				</ul>
+				<g:if test="${session.user}">
+					<ul class="nav">
+						<li><g:link controller="events" action="list">Eventos</g:link></li>
+					</ul>
+				</g:if>
 				<ul class="nav pull-right">
 		            <li><a href="#">Acerca</a></li>
 		            <g:if test="${!session.user}">

@@ -7,7 +7,7 @@ class User {
 	String alias
 	String email
 	String password
-
+	
     static constraints = {
 		email email:true, nullable: false, unique: true, blank: false
 		name nullable: false, blank: false
