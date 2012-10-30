@@ -23,6 +23,8 @@ class EventsController {
 		}
 		[event: event]
 	}
+
+	// Comment made in test branch
 	
 	def save(){
 		Event event = null
