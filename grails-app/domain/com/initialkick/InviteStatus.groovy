@@ -16,4 +16,8 @@ public enum InviteStatus {
 		this.id = id
 	}
 	
+	public String toString(){
+		return name
+	}
+	
 }
