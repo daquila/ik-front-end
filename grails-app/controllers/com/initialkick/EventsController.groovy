@@ -6,6 +6,8 @@ import com.initialkick.EventInvite
 
 
 class EventsController {
+
+	// Change made in master
 	
 	def list() {
 		[events: Event.findAllByOwner(session.user).groupBy{it.group.name}]
